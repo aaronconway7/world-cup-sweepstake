@@ -1,0 +1,17 @@
+{
+  "name": "world-cup-sweepstake",
+  "description": "Sweepstake Generator for the 2018 Fifa World Cup",
+  "main": "index.js",
+  "authors": [
+    "aaronconway7 <aaronconway796@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/aaronconway7/world-cup-sweepstake",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

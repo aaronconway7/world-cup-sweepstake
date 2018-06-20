@@ -1,0 +1,94 @@
+// Table
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.table
+    display: table
+    width: 100%
+
+    &.border
+
+        .table-cell
+            border: 1px solid $eden-dark-grey
+
+    &.col-border
+
+        .table-cell
+            border-right: 1px solid $eden-dark-grey
+
+            &:last-of-type
+                border-right: none
+
+    &.row-border
+
+        .table-cell
+            border-bottom: 1px solid $eden-dark-grey
+
+        .table-body
+
+            .table-row
+
+                &:last-of-type
+
+                    .table-cell
+                        border-bottom: none
+
+    .table-heading
+        background-color: $eden-green
+        color: $eden-light-grey
+        display: table-header-group
+        font-weight: bold
+
+        &.border-bottom
+
+            .table-cell
+                border-bottom: 1px solid $eden-charcoal !important
+
+        &.dark
+            background-color: $eden-charcoal
+        &.light
+            background-color: $eden-light-grey
+            color: $eden-charcoal
+        &.transparent
+            background-color: transparent
+            color: $eden-charcoal
+
+    .table-body
+        display: table-row-group
+        background-color: $eden-green
+
+        &.dark
+            background-color: $eden-charcoal
+        &.light
+            background-color: $eden-light-grey
+            color: $eden-charcoal
+        &.transparent
+            background-color: transparent
+            color: $eden-charcoal
+
+        &.light
+
+            &.striped
+
+                .table-row
+
+                    &:nth-of-type(even)
+                        background-color: lighten($eden-light-grey, 5)
+
+        &.dark
+
+            &.striped
+
+                .table-row
+
+                    &:nth-of-type(even)
+                        background-color: lighten($eden-charcoal, 5)
+
+    .table-row
+        display: table-row
+
+        .table-cell
+            display: table-cell
+            padding: 3px 10px
+
+.responsive-table
+    overflow-x: auto

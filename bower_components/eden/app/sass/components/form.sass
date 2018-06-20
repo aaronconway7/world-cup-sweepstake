@@ -1,0 +1,253 @@
+// Form
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+input, textarea, select
+    appearance: none
+    box-shadow: none
+    border: none
+    outline: none
+    padding: 1em 2em
+    vertical-align: bottom
+    display: inline-block
+    width: 100%
+    background: none
+
+    &.fat
+        padding-left: 3em
+        padding-right: 3em
+
+    &.skinny
+        padding-left: 1em
+        padding-right: 1em
+
+    &.tall
+        padding-top: 1.5em
+        padding-bottom: 1.5em
+
+    &.short
+        padding-top: 0.5em
+        padding-bottom: 0.5em
+
+    &.dark
+
+        &.border
+            border: 1px solid $eden-light-grey
+
+            &-bottom
+                border-bottom: 1px solid $eden-light-grey
+
+    &.eden
+
+        &.border
+            border: 1px solid $eden-charcoal
+
+            &-bottom
+                border-bottom: 1px solid $eden-charcoal
+
+    &.border
+        border: 1px solid $eden-dark-grey
+
+        &-bottom
+            border-bottom: 1px solid $eden-dark-grey
+
+            &.transparent
+                padding-left: 0px
+
+    &.rounded
+        border-radius: 0.25em
+    &.sharp
+        border-radius: 0px
+    &.round
+        border-radius: 100px
+
+input
+
+    &[type="submit"], &[type="reset"]
+        transition: all 0.3s ease-in-out
+        cursor: pointer
+
+        &:hover
+            background-color: darken($eden-green, 10)
+
+        &.dark
+
+            &:hover
+                background-color: darken($eden-charcoal, 10)
+
+        &.light
+
+            &:hover
+                background-color: darken($eden-light-grey, 10)
+
+        &.eden
+
+            &:hover
+                background-color: darken($eden-green, 10)
+
+        &.transparent
+            opacity: 0.7
+
+            &:hover
+                opacity: 1
+
+    &.animated-search
+
+        &:focus
+            width: 100%
+
+.select
+    position: relative
+    cursor: pointer
+    display: block
+
+    &:after
+        content: '\f0dc'
+        font-family: 'FontAwesome'
+        color: $eden-green
+        position: absolute
+        display: flex
+        justify-content: center
+        align-items: center
+        top: 50%
+        transform: translate3d(0px, -50%, 0px)
+        right: 1em
+        pointer-events: none
+
+    &.dark
+
+        &:after
+            color: $eden-light-grey
+
+    &.light
+
+        &:after
+            color: $eden-charcoal
+
+textarea
+    height: 150px
+
+.checkbox
+    cursor: pointer
+    color: #666
+
+    input[type="checkbox"]
+        display: none
+
+        & + .label-text
+
+            &:before
+                content: '\f096'
+                font-family: 'FontAwesome'
+                width: 1em
+                margin-right: 0.2em
+                display: inline-block
+
+        &:checked
+
+            & + .label-text
+
+                &:before
+                    content: '\f14a'
+                    color: $eden-green
+                    animation: pop-out 180ms ease-in
+        &:disabled
+
+            & + .label-text
+                color: #aaa
+
+                &:before
+                    content: '\f0c8'
+                    color: #ccc
+
+
+.toggle
+    cursor: pointer
+
+    &.round
+        border-radius: 100px
+
+        .toggle-control
+            border-radius: 100px
+        .handle
+            border-radius: 100px
+
+    &.light
+
+        .toggle-control
+            background-color: $eden-light-grey
+            color: $eden-charcoal
+
+    &.dark
+
+        .toggle-control
+            background-color: $eden-charcoal
+            color: $eden-light-grey
+
+    &.eden
+
+        .toggle-control
+            background-color: $eden-green
+            color: $eden-light-grey
+
+    &.transparent
+
+        .toggle-control
+            background-color: transparent
+            border: 0.1em solid black
+
+            .handle
+                border: 0.1em solid black
+
+    &.tall
+
+        .toggle-control
+            padding-top: 1.5em
+            padding-bottom: 1.5em
+
+    &.short
+
+        .toggle-control
+            padding-top: 0.5em
+            padding-bottom: 0.5em
+
+    input[type="checkbox"]
+        display: none
+
+        &:checked + .toggle-control
+
+            & > .option-1
+                opacity: 0
+
+            & > .option-2
+                opacity: 1
+
+            & > .handle
+                transform: scaleY(0.9) scaleX(0.98) translate3d(-100%, 0px, 0px)
+
+    .toggle-control
+        display: flex
+        text-align: center
+        padding: 1em 0em
+        position: relative
+        transition: all 0.5s ease-in-out
+
+        .option-1
+            width: 50%
+
+        .option-2
+            width: 50%
+            opacity: 0
+
+        .handle
+            position: absolute
+            right: 0px
+            top: 0px
+            height: 100%
+            width: 50%
+            transform-origin: left
+            transform: scaleY(0.9) scaleX(0.98)
+            background-color: white
+            transition: transform 0.5s ease-in-out
+
+            &.shadow
+                box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5)

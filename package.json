@@ -1,0 +1,25 @@
+{
+  "name": "world-cup-sweepstake",
+  "version": "1.0.0",
+  "description": "Sweepstake Generator for the 2018 Fifa World Cup",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.24.4",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaronconway7/world-cup-sweepstake.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aaronconway7/world-cup-sweepstake/issues"
+  },
+  "homepage": "https://github.com/aaronconway7/world-cup-sweepstake#readme"
+}

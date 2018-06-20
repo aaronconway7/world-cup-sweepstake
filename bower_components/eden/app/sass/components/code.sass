@@ -1,0 +1,38 @@
+// Code
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.code
+    padding: 2px 4px
+    background-color: #282c34
+    color: $eden-light-grey
+    font-family: monospace
+    margin-bottom: 50px
+
+    &:last-child
+        margin-bottom: 0px
+
+    &.block
+        margin-top: 10px
+        position: relative
+        padding: 75px
+
+        &.short
+            padding: 50px
+
+        @media screen and (max-width: $tab-screen)
+            padding: 25px !important
+            font-size: 0.8rem
+
+    &.light
+        background-color: $eden-light-grey
+        color: $eden-charcoal
+    &.dark
+        background-color: $eden-charcoal
+        color: $eden-light-grey
+
+span
+
+    &.code
+        font-size: 0.8em
+        border: 1px solid $eden-dark-grey
+        border-radius: 0.2em
