@@ -9,11 +9,20 @@
         <header></header>
         <main ng-controller="sweepstakeController">
             <div class="container">
-                <ul>
-                    <li ng-repeat="x in wcTeams.teams">{{x.name}}</li>
-                </ul>
-                <button class="button" ng-click="getRandTeam()">Randomise</button>
-                <p>{{randTeam}}</p>
+                <div class="players">
+                    <p>Num of players: {{players.length}}</p>
+                    <button class="button border" ng-click="addPlayer()">Add Player</button>
+                    <input type="text" ng-repeat="i in [] | range:players.length" name="player{{i+1}}" ng-model="players[i]" class="border" placeholder="Name">
+                </div>
+                <p>{{players}}</p>
+                <p>{{teams}}</p>
+                <!-- <ul>
+                    <li ng-repeat="team in teams">{{team}}</li>
+                </ul> -->
+                <button class="button" ng-click="generateSweepstake()">Randomise</button>
+                <div class="results">
+                    <p>{{split}}</p>
+                </div>
             </div>
         </main>
         <footer></footer>
