@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="players">
+        <p>Num of players: {{players.length}}</p>
+        <button class="button border" ng-click="addPlayer()">Add Player</button>
+        <input type="text" ng-repeat="i in [] | range:players.length" name="player{{i+1}}" ng-model="players[i]" class="border" placeholder="Name">
+    </div>
+    <p>{{players}}</p>
+    <p>{{teams}}</p>
+    <!-- <ul>
+        <li ng-repeat="team in teams">{{team}}</li>
+    </ul> -->
+    <button class="button" ng-click="generateSweepstake()">Randomise</button>
+    <div class="results">
+        <p>{{split}}</p>
+    </div>
+</div>

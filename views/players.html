@@ -1,0 +1,22 @@
+<!-- <div class="players">
+    <p>Num of players: {{players.length}}</p>
+    <button class="button pill" ng-click="addPlayer()">Add Player</button>
+    <input type="text" ng-repeat="i in [] | range:players.length" name="player{{i+1}}" ng-model="players[i]" class="border" placeholder="Name">
+</div>
+<p>{{players}}</p> -->
+
+<div class="players">
+    <div class="bg bg-center"></div>
+    <div class="content col center-center">
+        <div class="container">
+            <h1 class="title text-center">Add your Players</h1>
+            <div class="row add-player-row" ng-repeat="i in [] | range:players.length + 1">
+                <input type="text" name="player{{i+1}}" ng-model="players[i]" class="input-player" placeholder="Name">
+                <button class="button pill add-players-btn" ng-click="addPlayer()">Add</button>
+            </div>
+            <div class="row center-center">
+                <a href="#!/sweepstake" class="button continue-btn pill">Continue</a>
+            </div>
+        </div>
+    </div>
+</div>
