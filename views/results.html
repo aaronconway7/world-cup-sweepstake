@@ -1,0 +1,19 @@
+<div class="results">
+    <div class="bg bg-center"></div>
+    <div class="content col center-center">
+        <div class="container">
+            <h1 class="title text-center">Results</h1>
+            <div class="col results-col">
+                <div ng-repeat="player in players" class="player-result player-{{$index}}-result">
+                    <p class="player-name">{{player}}</p>
+                    <ul class="country-results">
+                        <li class="country" ng-repeat="country in split[player]">{{country}}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row center-center">
+                <a href="#!/" ng-click="reset()" class="button restart-btn pill">Restart</a>
+            </div>
+        </div>
+    </div>
+</div>

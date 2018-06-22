@@ -3,16 +3,19 @@
     <head>
         <meta charset="utf-8">
         <title>World Cup Sweepstake Generator</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
         <link rel="stylesheet" href="lib/eden/eden.min.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
-    <body>
+    <body ng-controller="sweepstakeController">
         <header></header>
         <main ng-view>
         </main>
 
         <footer class="row right-center">
-            <p>Made by Aaron Conway</p>
+            <span>Made by</span>
+            <a class="transition" href="https://aaronconway.co.uk" target="_blank">Aaron Conway</a>
+            <a class="transition" href="https://github.com/aaronconway7" target="_blank"><i class="fab fa-github"></i></a>
         </footer>
 
         <!-- Scripts -->

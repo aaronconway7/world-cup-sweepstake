@@ -22,8 +22,18 @@ footer
     bottom: 0
     padding: 10px 15px
 
-    p
+    span, a
         opacity: 0.2
+        margin-right: 0.5em
+    
+    a
+        &:last-child
+            margin-right: 0px
+        
+        &:hover
+            opacity: 1
+    
     
 @import views/home
 @import views/players
+@import views/results

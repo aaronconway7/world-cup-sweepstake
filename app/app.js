@@ -6,12 +6,13 @@ app.config(["$routeProvider", function($routeProvider){
             templateUrl: "views/home.html"
         })
         .when("/players", {
-            templateUrl: "views/players.html",
-            controller: "sweepstakeController"
+            templateUrl: "views/players.html"
+        })
+        .when("/results", {
+            templateUrl: "views/results.html"
         })
         .when("/sweepstake", {
-            templateUrl: "views/sweepstake.html",
-            controller: "sweepstakeController"
+            templateUrl: "views/sweepstake.html"
         })
         .otherwise({
             redirectTo: "/"
