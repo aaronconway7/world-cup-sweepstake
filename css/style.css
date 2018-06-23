@@ -5,6 +5,9 @@
 * {
   font-family: molot; }
 
+body {
+  overflow-x: hidden; }
+
 .button {
   background-color: white;
   color: #417505;
@@ -16,14 +19,12 @@
 footer {
   background-color: transparent;
   font-size: 0.8rem;
-  position: absolute;
+  position: fixed;
   bottom: 0;
+  right: 0;
   padding: 10px 15px; }
   footer span, footer a {
-    opacity: 0.2;
-    margin-right: 0.5em; }
-  footer a:last-child {
-    margin-right: 0px; }
+    opacity: 0.2; }
   footer a:hover {
     opacity: 1; }
 
@@ -41,14 +42,24 @@ footer {
     position: absolute;
     width: 100vw;
     background-image: url("../assets/img/bg/football-stadium.jpg");
-    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 75%); }
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 75%);
+    z-index: -1; }
     @media screen and (min-width: 1150px) {
       .home .bg {
         clip-path: polygon(0 0, 100% 0, 100% 45%, 0 75%); } }
+  .home .content {
+    z-index: 1;
+    margin: 0 auto;
+    display: grid;
+    justify-items: center;
+    align-items: center; }
   .home .title {
     color: white;
     margin-bottom: 40px;
     font-size: 1.5em; }
+  .home .grid-row {
+    display: grid;
+    justify-items: center; }
   .home .start-btn {
     font-size: 0.6em; }
     .home .start-btn:hover {
@@ -73,16 +84,22 @@ footer {
     @media screen and (min-width: 1150px) {
       .players .bg {
         clip-path: polygon(0 0, 100% 0, 100% 45%, 0 75%); } }
+  .players .content {
+    display: grid;
+    justify-items: center;
+    align-items: center; }
   .players .title {
     color: white;
     margin-bottom: 40px;
     font-size: 1.5em; }
   .players .add-player-row {
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center; }
     .players .add-player-row .input-player {
       background-color: white;
       box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.5);
-      margin-right: 10px;
       font-size: 0.75em;
       padding: 0.75em 1.25em; }
     .players .add-player-row .remove-player-btn {
@@ -101,6 +118,9 @@ footer {
         opacity: 1; }
     .players .add-player-row.last .remove-player-btn {
       display: none; }
+  .players .next-btn-row {
+    display: grid;
+    justify-content: center; }
   .players .continue-btn {
     font-size: 0.6em; }
     .players .continue-btn:hover {
@@ -125,15 +145,23 @@ footer {
     @media screen and (min-width: 1150px) {
       .results .bg {
         clip-path: polygon(0 0, 100% 0, 100% 45%, 0 75%); } }
+  .results .content {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 100%; }
   .results .title {
     color: white;
     margin-bottom: 40px;
     font-size: 1.5em; }
   .results .results-col {
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    display: grid;
+    justify-items: center;
+    grid-row-gap: 10px; }
     .results .results-col .player-result {
       background-color: white;
-      margin-bottom: 10px;
+      width: 100%;
       box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.5);
       padding: 0.75em 1.25em; }
       .results .results-col .player-result:last-child {
@@ -143,6 +171,9 @@ footer {
       .results .results-col .player-result .country {
         opacity: 0.5;
         font-size: 0.8em; }
+  .results .next-btn-row {
+    display: grid;
+    justify-content: center; }
   .results .restart-btn {
     font-size: 0.6em; }
     .results .restart-btn:hover {

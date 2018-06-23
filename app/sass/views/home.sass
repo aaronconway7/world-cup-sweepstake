@@ -14,14 +14,26 @@
         width: 100vw
         background-image: url("../assets/img/bg/football-stadium.jpg")
         clip-path: polygon(0 0, 100% 0, 100% 50%, 0 75%)
+        z-index: -1
 
         @media screen and (min-width: 1150px)
             clip-path: polygon(0 0, 100% 0, 100% 45%, 0 75%)
+    
+    .content
+        z-index: 1
+        margin: 0 auto
+        display: grid
+        justify-items: center
+        align-items: center
 
     .title
         color: white
         margin-bottom: 40px
         font-size: 1.5em
+
+    .grid-row
+        display: grid
+        justify-items: center
     
     .start-btn
         font-size: 0.6em
