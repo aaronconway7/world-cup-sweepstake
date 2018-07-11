@@ -4,7 +4,7 @@
         <div class="container">
             <h1 class="title text-center">Add your Players</h1>
             <div class="add-player-row" ng-class="{'last':$last}" ng-repeat="i in [] | range:players.length + 1">
-                <input type="text" name="player{{i+1}}" ng-model="players[i]" class="input-player transition" placeholder="Enter Name">
+                <input type="text" name="player{{i+1}}" ng-model="players[i]" class="input-player transition" tabindex="{{i+1}}" placeholder="Enter Name">
                 <button class="button pill remove-player-btn" ng-click="removePlayer(i)">✖</button>
             </div>
             <div class="grid-row next-btn-row">
