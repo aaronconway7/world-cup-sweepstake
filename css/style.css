@@ -150,6 +150,8 @@ footer {
     justify-content: center;
     align-items: center;
     grid-template-columns: 100%; }
+    .results .content > .container {
+      width: 600px; }
   .results .title {
     color: white;
     margin-bottom: 40px;
