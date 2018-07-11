@@ -162,15 +162,32 @@ footer {
     .results .results-col .player-result {
       background-color: white;
       width: 100%;
-      box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.5);
-      padding: 0.75em 1.25em; }
+      box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.5); }
       .results .results-col .player-result:last-child {
         margin-bottom: 0px; }
       .results .results-col .player-result .player-name {
-        margin-bottom: 10px; }
+        padding: 0.75em 1.25em; }
       .results .results-col .player-result .country {
         opacity: 0.5;
         font-size: 0.8em; }
+      .results .results-col .player-result .team {
+        display: grid;
+        position: relative;
+        border-top: 1px solid #eee; }
+        .results .results-col .player-result .team:hover .team-name {
+          opacity: 1; }
+        .results .results-col .player-result .team .team-flag {
+          width: 100%; }
+        .results .results-col .player-result .team .team-name {
+          position: absolute;
+          color: white;
+          background-color: rgba(0, 0, 0, 0.5);
+          left: 0;
+          top: 0;
+          display: grid;
+          justify-content: center;
+          align-content: center;
+          opacity: 0; }
   .results .next-btn-row {
     display: grid;
     justify-content: center; }

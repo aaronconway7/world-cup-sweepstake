@@ -6,9 +6,10 @@
             <div class="results-col">
                 <div ng-repeat="player in players" class="player-result player-{{$index}}-result">
                     <p class="player-name">{{player}}</p>
-                    <ul class="country-results">
-                        <li class="country" ng-repeat="country in split[player]">{{country}}</li>
-                    </ul>
+                    <div class="team" ng-repeat="team in split[player]">
+                        <img class="team-flag" src={{team.flag}} alt={{team.name}}>
+                        <p class="team-name fill-x fill-y transition">{{team.name}}</p>
+                    </div>
                 </div>
             </div>
             <div class="next-btn-row">
